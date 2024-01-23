@@ -1,0 +1,84 @@
+.Home {
+  max-width: 100%;
+  background: #000000;
+}
+.HomePage {
+  max-width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  background: #000000;
+  color: #d5b869;
+  font-family: 'VT323', monospace;
+}
+
+.Logo {
+  display: flex;
+  max-width: 1280px;
+  padding-left: 3em;
+}
+ .UnderLogo {
+  display: flex;
+
+ }
+.Songweaver {
+  display: flex;
+  justify-content:flex-start;
+  max-width: 30%;
+}
+
+.Instructions {
+  display: flex;
+  justify-content:center;
+  font-size:40px;
+  padding-right: 4%;
+}
+
+.FormSection {
+  display: flex;
+  flex-direction: column
+}
+
+.Forms {
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  
+  font-size:35px
+}
+
+.LoginForm {
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  flex-wrap: wrap;
+  max-width: 50%;
+}
+
+.RegisterForm {
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  flex-wrap:wrap;
+  max-width: 50%;
+}
+
+input {
+  width: 75%;
+  border-color:  #49b0a5;
+  background-color: #000000;
+  font-family: 'VT323', monospace;
+  font-size:30px;
+  color: #FFFFFF;
+  justify-content:center;
+}
+
+button {
+  justify-content:center;
+  width: 30%;
+  padding: 2%;
+  background-color: #49b0a5;
+  font-family: 'VT323', monospace;
+  font-size: 25px;
+  color: #FFFFFF;
+}
+

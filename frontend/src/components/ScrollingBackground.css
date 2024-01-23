@@ -1,15 +1,24 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 200%;
+}
+
 .background-scroll-container {
   width: 100%;
   height: 100vh;
+  margin: 0;
   overflow: hidden;
   position: relative;
 }
 
 .background-scroll-content {
-  background-image: url('/HomeRepeatingPattern.png'); 
+  background-image: url('/RepeatingPatternExample.png'); 
   background-repeat: repeat;
+  background-size: cover;
   width: 100%;
-  height: 200%; /* Adjust the height based on your design */
+  height: 200%;
   position: absolute;
   top: 0;
   left: 0;
