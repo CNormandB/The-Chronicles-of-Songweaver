@@ -72,6 +72,7 @@
 
 input {
   width: 75%;
+  margin: 3%;
   border-color:  #49b0a5;
   background-color: #000000;
   font-family: 'VT323', monospace;
@@ -80,10 +81,13 @@ input {
   justify-content:center;
 }
 
-button {
-  justify-content:center;
+.Forms button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 30%;
   padding: 2%;
+  margin: 2%;
   background-color: #49b0a5;
   font-family: 'VT323', monospace;
   font-size: 25px;

@@ -1,5 +1,4 @@
 import React from 'react';
-import './ScrollingBackground.css'; // Import the stylesheet
 
 const ScrollingBackground = ({ children }) => {
   return (
