@@ -1,23 +1,26 @@
-return (
-  <section className="LoginRegisterForm">
-    <h1> Log in or register to pursue thy quest further </h1>
-    <div className="LoginForm">
-      <form method="post">
-        <textarea placeholder="Email or Username"></textarea>
-      </form>
-      <form method="post">
-        <textarea placeholder="Password"></textarea>
-      </form>
-    </div>
-    <div className="RegisterForm">
-    <form method="post">
-        <textarea placeholder="Email or Username"></textarea>
-      </form>
-      <form method="post">
-        <textarea placeholder="Password"></textarea>
-      </form>
-    </div>
-    <button> Submit </button>
-  </section>
-
-)
+function LoginRegister() {
+  return (
+    <section className="LoginRegisterForm">
+      <p> Log in or register to pursue thy quest further </p>
+      <div className="LoginForm">
+        <p>Login</p>
+        <form>
+          <input placeholder="Email or Username"></input>
+          <input placeholder="Password"></input>
+        </form>
+      </div>
+      <div className="RegisterForm">
+        <p>Register</p>
+        <form>
+          <input placeholder="First Name"></input>
+          <input placeholder="Last Name"></input>
+          <input placeholder="Username"></input>
+          <input placeholder="Email"></input>
+          <input placeholder="Password"></input>
+        </form>
+      </div>
+      <button> Submit </button>
+    </section>
+  );
+}
+export default LoginRegister;
