@@ -4,7 +4,6 @@
   justify-content: center;
   height: 100vh;
   background: #000000;
-
 }
 
 .HomePage {
@@ -15,8 +14,6 @@
   background: #000000;
   color: #d5b869;
   font-family: 'VT323', monospace;
-  padding: 20px; /* Adjust padding as needed */
-  box-sizing: border-box;
 }
 
 .Logo {
