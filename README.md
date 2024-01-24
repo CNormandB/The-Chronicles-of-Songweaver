@@ -12,7 +12,7 @@ Currently, two official plugins are available:
 
 
 ### Dependencies
--Node 16.x.x 
--Postgres 6.x
--Express
--React
+- Node 18.x.x 
+- Postgres 6.x
+- Express
+- React
