@@ -8,7 +8,6 @@ function Home() {
     <div className="Home">
       <section className="HomePage shaper">
         <img src="HeaderLogo.png" className="Logo"></img>
-
         <div className="UnderLogo">
           <img src="Songweaver.png" className="Songweaver"></img>
           <div className="FormSection">
