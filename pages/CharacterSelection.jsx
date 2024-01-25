@@ -5,3 +5,5 @@ function CharacterSelection() {
     </section>
   )
 }
+
+export default CharacterSelection
