@@ -14,8 +14,8 @@ function CharacterSelection() {
         <ImageComponent imageSrc="/Characters/MaleElfWizzard.png"/>
         <ImageComponent imageSrc="/Characters/FemaleHalf-OrcBarbarian.png"/>
         <ImageComponent imageSrc="/Characters/MaleHalf-OrcBarbarian.png"/>
-        <ImageComponent imageSrc="/Characters/FemaleGnomeRanger.png"/>
-        <ImageComponent imageSrc="/Characters/MaleGnomeRanger.png"/>
+        <ImageComponent imageSrc="/Characters/FemaleTeiflingRogue.png"/>
+        <ImageComponent imageSrc="/Characters/MaleTeiflingRogue.png"/>
       </div>
     </section>
   );
