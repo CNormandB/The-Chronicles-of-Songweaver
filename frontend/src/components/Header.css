@@ -1,0 +1,15 @@
+.Header {
+  display: flex;
+  flex-direction:column;
+  background: #000000;
+  color: #ffffff;
+  font-family: "VT323", monospace;
+}
+
+.Logo {
+  justify-content:flex-start;
+}
+
+.Greeting {
+  justify-content:flex-end;
+}
