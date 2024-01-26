@@ -1,0 +1,17 @@
+.CharacterNamer{ 
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    background-color: #b5966a;
+    color: #000000;
+}
+.NameSubmitButton{ 
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    background-color: #b5966a
+}
+
+.OnHover{
+  opacity: hovered ? 0.7 : 1;
+  cursor: pointer;
+  maxWidth: 70%;
+}
