@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./CharacterSelection.css";
-import Header from "../frontend/src/components/Header";
+import Header from "/components/Header";
 import ImageComponent from "../components/CharacterSelectionHandler";
 import background from "/Locations/tavern.jpg";
 
