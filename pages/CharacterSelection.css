@@ -1,37 +1,23 @@
 .CharacterSelection {
   background: url(/Locations/tavern.jpg);
   background-size: cover;
-  max-height:100%;
   background-position: center;
-
+  height: 100vh;
 }
 
-.FemaleElfWizzard {
-  max-height: 10%;
-  max-width: 15%;
+.Characters{
+  display: flex;
+  min-height: 85%;
+  align-items: flex-end;
+  padding-left: 2em;
 }
 
-.MaleElfWizzard{
-  max-height: 10%;
-  max-width: 15%;
-}
-
-.FemaleHalf-OrcBarbarian{
-  max-height: 10%;
-  max-width: 15%;
-}
-
-.MaleHalf-OrcBarbarian{
-  max-height: 10%;
-  max-width: 15%;
-}
-
-.FemaleGnomeRanger{
-  max-height: 10%;
-  max-width: 15%;
-}
-
-.MaleGnomeRanger{
-  max-height: 10%;
-  max-width: 15%;
+.popup{
+  background: url(/public/Characters/Parchment.jpg);
+  background-size: cover;
+  font-family: 'VT323', monospace;
+  font-weight: 600;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 2em;
 }
