@@ -1,7 +1,7 @@
-DROP TABLE IF EXISTS users CASCADE;
+DROP TABLE IF EXISTS sutations CASCADE;
 
 CREATE TABLE situations (
-  id SERIAL PRIMARY KEY NOT NULL,
+  situation_id SERIAL PRIMARY KEY NOT NULL,
   situation_text TEXT NOT NULL,
   image_path TEXT,
   option_1 TEXT,
