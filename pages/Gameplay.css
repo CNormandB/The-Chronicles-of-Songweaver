@@ -1,0 +1,53 @@
+.Gameplay {
+  background: #000000;
+  height: 100vh;
+}
+
+.Story {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.ArtFrame {
+  max-height: 80%;
+  padding-top: 7em;
+  padding-right: ;
+  padding-left: 10em
+}
+
+.TextSpace {
+  font-family: "VT323", monospace;
+  color: #ffffff;
+  border: thick double #d5b869;
+  height: 70%;
+  width: 45%;
+  padding: 2em;
+  margin:6em;
+  margin-top: 7em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align buttons to the right */
+  margin-top: auto;
+}
+
+.Buttons button {
+  background: #000000;
+  border: solid #d5b869;
+  font-family: "VT323", monospace;
+  color: white;
+  width: 90%;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+
+.Buttons button:hover {
+  background: darkviolet;
+}
