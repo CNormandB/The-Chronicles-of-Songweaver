@@ -9,6 +9,7 @@ const AppRouter = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/menu" element={<Menu />} />
         <Route path="/characterselection" element={<CharacterSelection/>}/>
         <Route path="/gameplay" element={<Gameplay/>}/>
       </Routes>
