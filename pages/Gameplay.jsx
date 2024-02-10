@@ -20,7 +20,7 @@ function Gameplay() {
   const specialButtonRef = useRef(null);
   const textareaRef = useRef(null)///
 
-  ////////////////////////////////////////////////////////////////////
+  //FUNCTIONS ///////////////////////////////////////////////////////////////////////////////////
  
   const setLoggedInUser = async () => {
     try {
@@ -51,6 +51,8 @@ function Gameplay() {
 
   const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
+
+  // Sets scrollposition on textarea to bottom ----------------------------------------------------
   useEffect(() => {
     // Ensure that textareaRef is initialized before setting scroll position
     if (textareaRef.current) {
@@ -59,29 +61,9 @@ function Gameplay() {
     }
   }, [narratorText]); 
 
-  //get situation-------------------------------------------------------------------
-  // const getSituation = async(id) => {
-  //   try {
-  //     const res = await fetch(`http://localhost:5432/situation/${id}`)
-  //     const situationData = await res.json()
-  //     setCurrentSituation(situationData[0].situation_id)
-  //     setImage(situationData[0].image_link)
-  //     updateNarratorText(situationData[0].situation_text)
-  //     loadOptions(currentSituation)
-  //     console.log("update narratorText has ran!!!")
-  //     //set situation as state num value
-  //   } catch (error) {
-  //     console.log(error.message)
-  //   }
-  // }
 
 //render options buttons---------------------------------------------------------------
-
-
-
   const renderOptionsButtons = (option) => {
-    
-
     const specialOptionsIdsArray = [5]
     const specialOptionEnabled = (() => {
       for (const skillCheckOption of skillCheckOptions) {
@@ -132,17 +114,15 @@ function Gameplay() {
   }
 
 
-
-
   //handleSpecialButtonClick---------------------------------------------------------
-  const handleSpecialButtonClick = (optionId, characterClass ) => {
+  const handleSpecialButtonClick = (optionId, characterClass) => {
     // const specialButton = document.getElementById('specialButton');
     const specialButton = specialButtonRef.current
 
     // Check if the button is disabled
-    if (specialButton && !specialButton.classList.contains('disabled') ) {// make it check state for specialbuttons array objects with special buttons option, and enabled
+    if (specialButton && !specialButton.classList.contains('disabled')) {// make it check state for specialbuttons array objects with special buttons option, and enabled
       // Perform your skill check logic here
-      
+
       handleSkillCheckButton(optionId, characterClass, updateNarratorText);
       console.log("pretend that skill check func happens now!!! COOL!!")
 
@@ -150,7 +130,7 @@ function Gameplay() {
       specialButton.classList.add('disabled');
       //update state array of specialbuttons objects for button to be enabled: false
       setSkillCheckOptions(prevOptions => [
-        ...prevOptions.map(option => 
+        ...prevOptions.map(option =>
           option.optionId === optionId ? { ...option, enabled: false } : option
         )
       ]);
@@ -189,7 +169,6 @@ function Gameplay() {
   }
 
 
-
   const loadOptions = async(currentSituation) => {
     try {
       const res = await fetch(`http://localhost:5432/options/${currentSituation}`)
@@ -205,10 +184,9 @@ function Gameplay() {
   
 
   /////////////////////////////////////////////////////////////////////////////////////////
-
   //USE EFFECTS ----------------------------------------------------------------------------------------
 
-  useEffect(() => {
+  useEffect(() => {//forces single-load of first situation ( to avoid double-narration)
     
     const fetchData = async () => {
       let isInitialMount = true;
@@ -236,14 +214,12 @@ function Gameplay() {
           } catch (error) {
             console.log(error.message);
           }
-        
     }
-  
     fetchData();
   }, []);
 
-  useEffect(() => {
-    
+
+  useEffect(() => {//loads other situations after first scene as normally
     const fetchData = async () => {
       
       if (currentSituation !== "1") {
@@ -286,8 +262,15 @@ function Gameplay() {
   };
 
 
+  
 
- 
+
+
+
+
+
+
+
 //_________________________________________________JSX_______________________________________________________________
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   //___________________________________________________________________________________________________
