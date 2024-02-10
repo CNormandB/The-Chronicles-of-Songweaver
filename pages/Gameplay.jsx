@@ -39,14 +39,17 @@ function Gameplay() {
   const updateNarratorText = async (text) => {
     const characters = text.split('');
     let typedText = '';
-
+  
     for (let i = 0; i < characters.length; i++) {
       typedText += characters[i];
       setNarratorText((prevText) => prevText + characters[i]);
-      await delay(30); // Adjust the delay as needed for typing speed
+      await delay(40); // Adjust the delay as needed for typing speed
     }
-
+  
     setScrollPosition(textareaRef.current.scrollHeight);
+  
+    // Return a Promise that resolves when text updating is completed
+    return Promise.resolve();
   };
 
   const delay = (ms) => new Promise((res) => setTimeout(res, ms));
@@ -112,6 +115,14 @@ function Gameplay() {
       );
     }
   }
+
+  //handle NORMAL button click ---------------------------------------------------------
+  const handleButtonClick = async(destinationSituation, narratorText) => {
+    // setNarratorText(narratorText)
+    await updateNarratorText(narratorText)
+    setCurrentSituation(destinationSituation)
+    console.log(`Navigating to situation ${destinationSituation}`);
+  };
 
 
   //handleSpecialButtonClick---------------------------------------------------------
@@ -252,25 +263,6 @@ function Gameplay() {
 
 
   // console.log(options)
-
-
-  //handle button click ---------------------------------------------------------------------
-  const handleButtonClick = (destinationSituation, narratorText) => {
-    setNarratorText(narratorText)
-    setCurrentSituation(destinationSituation)
-    console.log(`Navigating to situation ${destinationSituation}`);
-  };
-
-
-  
-
-
-
-
-
-
-
-
 //_________________________________________________JSX_______________________________________________________________
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   //___________________________________________________________________________________________________
