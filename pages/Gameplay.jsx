@@ -205,33 +205,6 @@ function Gameplay() {
   
 
   /////////////////////////////////////////////////////////////////////////////////////////
-  // if (currentSituation === 1) {
-
-  //     const fetchData = async () => {
-  
-  //         try {
-  //           const res = await fetch(`http://localhost:5432/situation/${currentSituation}`);
-  //           const situationData = await res.json();
-  //           setImage(situationData[0].image_link);
-            
-  //           updateNarratorText(situationData[0].situation_text);
-  //           console.log("updateNarratorTExt called like a bitch")
-  //           const optionsData = await loadOptions(currentSituation);
-  //           const specialButtonEnabled = optionsData.some(
-  //             (option) => option.option_id === 5 && option.enabled
-  //           );
-  //           setSkillCheckOptions((prevOptions) =>
-  //             prevOptions.map((option) =>
-  //               option.optionId === 5 ? { ...option, enabled: specialButtonEnabled } : option
-  //             )
-  //           );
-  //         } catch (error) {
-  //           console.log(error.message);
-  //         }
-  //       }
-    
-  //     fetchData();
-  // };
 
   //USE EFFECTS ----------------------------------------------------------------------------------------
 
