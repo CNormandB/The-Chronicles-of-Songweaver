@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Home.css";
 import ScrollingBackground from "../components/ScrollingBackground";
 
@@ -7,7 +6,7 @@ function Home() {
   return (
     <div className="Home">
       <section className="HomePage shaper">
-        <img src="HeaderLogo.png" className="Logo"></img>
+        <img src="HeaderLogo.png" className="Logo" />
         <div className="UnderLogo">
           <img src="/Characters/Songweaver.png" className="Songweaver"></img>
           <div className="FormSection">
@@ -16,25 +15,25 @@ function Home() {
               Log in or register to pursue thy quest further!{" "}
             </p>
             <div className="Forms">
-              <div className="LoginForm">
+              <form className="LoginForm">
                 <p>Login</p>
-                <form>
-                  <input placeholder="Email or Username"></input>
-                  <input placeholder="Password"></input>
-                  <button > Login </button>
-                </form>
-              </div>
-              <div className="RegisterForm">
+                <input placeholder="Email or Username"></input>
+                <input placeholder="Password"></input>
+                <button> Login </button>
+              </form>
+              <form
+                className="RegisterForm"
+                action="http://localhost:5433/register"
+                method="post"
+              >
                 <p>Register</p>
-                <form action="http://localhost:5433/register" method="post">
-                  <input placeholder="First Name"></input>
-                  <input placeholder="Last Name"></input>
-                  <input placeholder="Username"></input>
-                  <input placeholder="Email"></input>
-                  <input placeholder="Password"></input>
-                  <button type="submit"> Register </button>
-                </form>
-              </div>
+                <input placeholder="First Name"></input>
+                <input placeholder="Last Name"></input>
+                <input placeholder="Username"></input>
+                <input placeholder="Email"></input>
+                <input placeholder="Password"></input>
+                <button type="submit"> Register </button>
+              </form>
             </div>
           </div>
         </div>
@@ -43,5 +42,5 @@ function Home() {
     </div>
   );
 }
- 
+
 export default Home;
