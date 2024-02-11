@@ -26,14 +26,14 @@ function Home() {
               </div>
               <div className="RegisterForm">
                 <p>Register</p>
-                <form>
+                <form action="http://localhost:5433/register" method="post">
                   <input placeholder="First Name"></input>
                   <input placeholder="Last Name"></input>
                   <input placeholder="Username"></input>
                   <input placeholder="Email"></input>
                   <input placeholder="Password"></input>
+                  <button type="submit"> Register </button>
                 </form>
-                <button> Register </button>
               </div>
             </div>
           </div>
