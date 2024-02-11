@@ -58,10 +58,10 @@ app.get('/situation/:id', async (req, res) => {
     const query = `
       SELECT
         s.*,
-        o1.option_username AS option_1_username,
-        o2.option_username AS option_2_username,
-        o3.option_username AS option_3_username,
-        o4.option_username AS option_4_username,
+        o1.option_name AS option_1_name,
+        o2.option_name AS option_2_name,
+        o3.option_name AS option_3_name,
+        o4.option_name AS option_4_name,
         o1.destination_situation AS option_1_destination,
         o2.destination_situation AS option_2_destination,
         o3.destination_situation AS option_3_destination,
@@ -99,7 +99,7 @@ app.get('/options/:id', async(req, res) => {
     const query = `
     SELECT
     option_id,
-    option_username,
+    option_name,
     destination_situation,
     option_text
 FROM
