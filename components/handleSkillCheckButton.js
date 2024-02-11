@@ -81,4 +81,3 @@ const handleSkillCheckButton = (optionId, characterClass, updateNarratorText) =>
 }
 
 export default handleSkillCheckButton;
-1

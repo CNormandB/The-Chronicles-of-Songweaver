@@ -1,8 +1,7 @@
 import express from 'express';
 import bcrypt from 'bcrypt'
 const app = express();
-const PORT = process.env.PORT || 5433;
-
+const PORT = process.env.PORT || 5431;
 
 import cors from 'cors'
 app.use(cors());
@@ -15,8 +14,8 @@ const { Pool } = pg;
 const pool = new Pool({
   user: 'labber',
   host: 'localhost',
-  database: 'text_gameboy_test',
-  password: '123',
+  database: 'chronicles_of_songweaver',
+  password: 'labber', 
   port: 5432,
 });
 /////////////////////////////////////////////////////

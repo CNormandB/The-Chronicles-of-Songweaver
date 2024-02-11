@@ -24,7 +24,7 @@ function Gameplay() {
  
   const setLoggedInUser = async () => {
     try {
-      const res = await fetch("http://localhost:5432/")
+      const res = await fetch("http://localhost:5431/")
       const jsonData = await res.json()
       // console.log(jsonData)
       setUserId(jsonData[0].user_id)
@@ -162,7 +162,7 @@ function Gameplay() {
   //save game function-----------------------------------------------------
   const saveGameHandler = async (currentSituation, userId ) => {
     try {
-      const res = await fetch(`http://localhost:5432/update-situation/${userId}`, {
+      const res = await fetch(`http://localhost:5431/update-situation/${userId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -179,7 +179,7 @@ function Gameplay() {
   //load game function------------------------------------------------------
   const loadGameHandler = async (userId) => {
     try {
-      const res = await fetch(`http://localhost:5432/${userId}`)
+      const res = await fetch(`http://localhost:5431/${userId}`)
       const jsonData = await res.json()
       setCurrentSituation(jsonData[0].current_situation)
 
@@ -192,7 +192,7 @@ function Gameplay() {
 
   const loadOptions = async(currentSituation) => {
     try {
-      const res = await fetch(`http://localhost:5432/options/${currentSituation}`)
+      const res = await fetch(`http://localhost:5431/options/${currentSituation}`)
       const optionsData = await res.json()
       setOptions(optionsData)
 
@@ -241,7 +241,7 @@ function Gameplay() {
       let isInitialMount = true;
       
         try {
-          const res = await fetch(`http://localhost:5432/situation/${currentSituation}`);
+          const res = await fetch(`http://localhost:5431/situation/${currentSituation}`);
           const situationData = await res.json();
           setImage(situationData[0].image_link);
           if (isInitialMount && currentSituation === '1') {
@@ -275,7 +275,7 @@ function Gameplay() {
       
       if (currentSituation !== "1") {
         try {
-          const res = await fetch(`http://localhost:5432/situation/${currentSituation}`);
+          const res = await fetch(`http://localhost:5431/situation/${currentSituation}`);
           const situationData = await res.json();
           setImage(situationData[0].image_link);
           updateNarratorText(situationData[0].situation_text);
