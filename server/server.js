@@ -13,8 +13,8 @@ const { Pool } = pg;
 const pool = new Pool({
   user: 'labber',
   host: 'localhost',
-  database: 'text_gameboy_test',
-  password: '123',
+  database: 'chronicles_of_songweaver',
+  password: 'labber', 
   port: 5432,
 });
 /////////////////////////////////////////////////////
