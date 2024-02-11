@@ -24,3 +24,4 @@ INSERT INTO options (option_id, option_name, destination_situation, option_text)
 
 
 -- Continue adding more seed data as needed.
+1
