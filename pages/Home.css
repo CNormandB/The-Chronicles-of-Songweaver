@@ -14,9 +14,10 @@ html, body {
 .HomePage {
   position: relative;
   z-index: 1;
-  max-width: 80%;
+  max-width: 95%;
+  padding-right: 2em;
   text-align: center;
-  background: #000000;
+  background: hsl(0, 0%, 0%);
   color: #d5b869;
   font-family: 'VT323', monospace;
 }
@@ -64,9 +65,10 @@ html, body {
 }
 
 .Forms input {
-  width: 75%;
   height: 10%;
-  margin: 3%;
+  max-width: 90%;
+  padding: 0.5em;
+  margin: 2%;
   border-color:  #49b0a5;
   background-color: #000000;
   font-family: 'VT323', monospace;
