@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Home.css";
 import ScrollingBackground from "../components/ScrollingBackground";
 
@@ -7,7 +6,7 @@ function Home() {
   return (
     <div className="Home">
       <section className="HomePage shaper">
-        <img src="HeaderLogo.png" className="Logo"></img>
+        <img src="HeaderLogo.png" className="Logo" />
         <div className="UnderLogo">
           <img src="/Characters/Songweaver.png" className="Songweaver"></img>
           <div className="FormSection">
@@ -17,16 +16,16 @@ function Home() {
             </p>
             <div className="Forms">
               <div className="LoginForm">
-                <p>Login</p>
                 <form>
+                  <p>Login</p>
                   <input placeholder="Email or Username"></input>
                   <input placeholder="Password"></input>
-                  <button > Login </button>
+                  <button> Login </button>
                 </form>
               </div>
               <div className="RegisterForm">
-                <p>Register</p>
                 <form action="http://localhost:5433/register" method="post">
+                  <p>Register</p>
                   <input placeholder="First Name"></input>
                   <input placeholder="Last Name"></input>
                   <input placeholder="Username"></input>
@@ -43,5 +42,5 @@ function Home() {
     </div>
   );
 }
- 
+
 export default Home;
