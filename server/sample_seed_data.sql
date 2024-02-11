@@ -5,7 +5,7 @@ INSERT INTO options (option_id, option_name, destination_situation, option_text)
     (2, 'INSPECT BODY', 3, 'the body is a dead guy, damn'),
     (3, 'NOTIFY ERIN', 4, 'maybe we should tell his daughter? good idea'),
     (4, 'GO BACK', 1, 'U go back to the crowd'),
-    (5, 'LOOK EVEN CLOSER (int check)', NULL , 'you notice big werewolfy claw marks across his back...'),
+    (5, 'LOOK EVEN CLOSER (int check)', NULL , 'special option text will not be displayed, needs to go in special option case'), 
     (6, 'GO BACK', 1, 'U go back to the crowd'),
     (7, 'INSPECT SHACK', NULL, 'damn its turned up!'),
     (8, 'ASK OSWALD', NULL, 'oswald is impatient, this wasnt his case...');

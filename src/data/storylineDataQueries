@@ -1,9 +1,35 @@
--- Users
-INSERT INTO users (username, password, current_situation) VALUES
-    ('player1', 'password123', 1),
-    ('player2', 'securepass', 2),
-    ('player3', 'gameon', 3);
-
+-- Options
+INSERT INTO options (option_id, option_name, destination_situation, option_text) VALUES
+    (1, 'START GAME', 2, NULL),
+    (2, 'INSPECT BODY', 3, 'Roll for intelligence '),
+    (3, 'TALK TO THE INN OWNER', 4, 'You decide to ask Sagh Gazara about the deceased'),
+    (4, 'GO BACK', 2, 'You return to the crowd'),
+-- need to figure out dice rolling ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    (5, 'Intelligence check', NULL , 'special option text needs to be added to special option case'),
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    (6, 'GO BACK', 2, 'You return to the crowd'),
+    (7, "GO TO GERORGE GILLY'S HOME", 6, 'Upon arrival to the blacksmiths home, you find it turned upside down'),
+    (8, 'TALK TO OSWALD', 5, 'Oswald is impatient, this was not his case.'),
+--- need dice roll logic and item logic ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    (9, 'INVESTIGATE THE HOUSE', 7, 'Roll for intelligence'),
+    (10, 'TAKE THE KEY', 8, 'Roll for strength'),
+    (11, 'INVESTIGATE LOCKBOX', 9, 'You take a closer look at the small, artless lockbox on the table'),
+    (12, 'PICK THE LOCK', 10, 'Roll for dexterity'),
+    (13, 'BREAK THE LOCK', 10, 'Roll for strength'),
+    (14, 'USE THE KEY', 10, 'You use the lockbox key and the lid pops open'),
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    (15, 'GO BACK', 6, 'You return to the entrace of the house'),
+    (16, 'INVESTIGATE THE TRACKS', 11, 'You decide to take a closer look at the bootprints leading away from the house.'),
+-- need to figure out dice rolling ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    (17, 'DETERMIN WHAT TYPE OF TRACKS THESE ARE', 12, 'Roll for wisdom'),
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    (18, 'TALK TO OSWALD', 13, 'Oswald is irritated.'),
+    (19, 'GO TO SER THAMES HOME', 14, 'You decide to go to Ser Thames home to invesitage.'),
+-- need to figure out dice rolling ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    (20, 'INVESTIGATE THE LETTER', 15, 'Roll for intelligence'),
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    (21, 'RETURN TO THE GAYMORE BEND', 16, 'You decide to return to the inn and rest for the night'),
+    (22, 'GO TO HOME OF XALTH TASS', 17, "You decide to go to Xalth Tass' home to invesitage her death");
 
 -- Situations
 INSERT INTO situations (situation_id, situation_text, image_link, option_1, option_2, option_3, option_4) VALUES
@@ -41,36 +67,8 @@ INSERT INTO situations (situation_id, situation_text, image_link, option_1, opti
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     (16, "\nAfter a exhaustive day of investigation, you finally return to Graymore Bend, seeking the solace of much-needed rest. However, your reprieve is short-lived as Sagh Gazara disturbs your sleep with grim tidings – Xalth Tass, the locksmith, was discovered dead in her home at the break of dawn", 'https://cdn.discordapp.com/attachments/1194709723820343336/1203839628654682142/E1C2_Inn.jpg?ex=65d28e05&is=65c01905&hm=99c125c2ed752359dfdbcdf8baff58a46bf2a2349a5748c064c7f55eae420569&', 22, NULL, NULL, NULL);
 
--- Options
-INSERT INTO options (option_id, option_name, destination_situation, option_text) VALUES
-    (1, 'START GAME', 2, NULL),
-    (2, 'INSPECT BODY', 3, 'Roll for intelligence '),
-    (3, 'TALK TO THE INN OWNER', 4, 'You decide to ask Sagh Gazara about the deceased'),
-    (4, 'GO BACK', 2, 'You return to the crowd'),
--- need to figure out dice rolling ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    (5, 'Intelligence check', NULL , 'you notice big werewolfy claw marks across his back...'),
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    (6, 'GO BACK', 2, 'You return to the crowd'),
-    (7, "GO TO GERORGE GILLY'S HOME", 6, 'Upon arrival to the blacksmiths home, you find it turned upside down'),
-    (8, 'TALK TO OSWALD', 5, 'Oswald is impatient, this was not his case.'),
---- need dice roll logic and item logic ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    (9, 'INVESTIGATE THE HOUSE', 7, 'Roll for intelligence'),
-    (10, 'TAKE THE KEY', 8, 'Roll for strength'),
-    (11, 'INVESTIGATE LOCKBOX', 9, 'You take a closer look at the small, artless lockbox on the table'),
-    (12, 'PICK THE LOCK', 10, 'Roll for dexterity'),
-    (13, 'BREAK THE LOCK', 10, 'Roll for strength'),
-    (14, 'USE THE KEY', 10, 'You use the lockbox key and the lid pops open'),
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    (15, 'GO BACK', 6, 'You return to the entrace of the house'),
-    (16, 'INVESTIGATE THE TRACKS', 11, 'You decide to take a closer look at the bootprints leading away from the house.'),
--- need to figure out dice rolling ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    (17, 'DETERMIN WHAT TYPE OF TRACKS THESE ARE', 12, 'Roll for wisdom'),
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    (18, 'TALK TO OSWALD', 13, 'Oswald is irritated.'),
-    (19, 'GO TO SER THAMES HOME', 14, 'You decide to go to Ser Thames home to invesitage.'),
--- need to figure out dice rolling ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    (20, 'INVESTIGATE THE LETTER', 15, 'Roll for intelligence'),
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    (21, 'RETURN TO THE GAYMORE BEND', 16, 'You decide to return to the inn and rest for the night'),
-    (22, 'GO TO HOME OF XALTH TASS', 17, "You decide to go to Xalth Tass' home to invesitage her death");
-
+-- Users
+INSERT INTO users (username, password, current_situation) VALUES
+    ('player1', 'password123', 1),
+    ('player2', 'securepass', 2),
+    ('player3', 'gameon', 3);
