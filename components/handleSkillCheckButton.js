@@ -151,7 +151,7 @@ if (optionId === 28) {
   }
 }
 
-if (optionId === 30) {
+if (optionId === 31) {
   const rollResult20 = D20Roller("intelligence", characterClass);
 
   if (rollResult20 >= 10 && rollResult20 < 17) {
@@ -163,7 +163,7 @@ if (optionId === 30) {
   }
 }
 
-if (optionId === 36) {
+if (optionId === 37) {
   const rollResult20 = D20Roller("wisdom", characterClass);
 
   if (rollResult20 >= 15) {
