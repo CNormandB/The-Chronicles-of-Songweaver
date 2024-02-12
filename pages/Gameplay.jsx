@@ -47,6 +47,7 @@ function Gameplay() {
     }
 
     setScrollPosition(textareaRef.current.scrollHeight);
+    Promise.resolve()
   };
 
   const delay = (ms) => new Promise((res) => setTimeout(res, ms));
@@ -118,7 +119,7 @@ function Gameplay() {
           </button>
       )
     } else {
-      return (
+       return (
         // Render normal button type for regular button
         <button
           className='m-1 mt-2 options rounded-0 bg-black '
