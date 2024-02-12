@@ -130,6 +130,48 @@ if (optionId === 20) {
         updateNarratorText(`\nDICEROLL RESULT: ${rollResult20}\nYou fail to notice anything new.`);
     }
 }
+
+if (optionId === 27) {
+  const rollResult20 = D20Roller("intelligence", characterClass);
+
+  if (rollResult20 >= 13) {
+      updateNarratorText(`\nDICEROLL RESULT: ${rollResult20}\n You discover that it looks like the implement that did it had prongs, like a fork. Two shallow cuts run perpendicular to the fatal slash`);
+  } else {
+      updateNarratorText(`\nDICEROLL RESULT: ${rollResult20}\nYou fail to notice anything new.`);
+  }
+}
+
+if (optionId === 28) {
+  const rollResult20 = D20Roller("wisdom", characterClass);
+
+  if (rollResult20 >= 13) {
+      updateNarratorText(`\nDICEROLL RESULT: ${rollResult20}\n You determine these wounds are most likely be the work of claws, though of immense size.`);
+  } else {
+      updateNarratorText(`\nDICEROLL RESULT: ${rollResult20}\nYou fail to notice anything new.`);
+  }
+}
+
+if (optionId === 30) {
+  const rollResult20 = D20Roller("intelligence", characterClass);
+
+  if (rollResult20 >= 10 && rollResult20 < 17) {
+    updateNarratorText(`\nDICEROLL RESULT: ${rollResult20}\nYou determine the second-story window was the point of entry.`);
+  } else if (rollResult20 >= 17) {
+    updateNarratorText(`\nDICEROLL RESULT: ${rollResult20}\nYou determine the second-story window was the point of entry. Jumping to reach that height would not be impossible, but would require above-average height.`);
+  } else {
+    updateNarratorText(`\nDICEROLL RESULT: ${rollResult20}\nYou fail to notice anything new.`);
+  }
+}
+
+if (optionId === 36) {
+  const rollResult20 = D20Roller("wisdom", characterClass);
+
+  if (rollResult20 >= 15) {
+      updateNarratorText(`\nDICEROLL RESULT: ${rollResult20}\n As you converse with Father Daragor, you sense his guardedness, like a veil over his words. However, Despite your suspicions, there is no concrete evidence to challenge his story. With a sigh of resignation, you accept the inability to uncover the truth, at least for now.`);
+  } else {
+      updateNarratorText(`\nDICEROLL RESULT: ${rollResult20}\nYou fail to notice anything suspicious about Father Daragor''s statement.`);
+  }
+}
   
   console.log('handle skill check function RAN!')
 }
