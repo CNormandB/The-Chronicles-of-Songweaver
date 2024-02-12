@@ -82,7 +82,7 @@ function Gameplay() {
   const renderOptionsButtons = (option) => {
     
 
-    const specialOptionsIdsArray = [5]
+    const specialOptionsIdsArray = [5, 9, 11, 12, 16, 20]
     const specialOptionEnabled = (() => {
       for (const skillCheckOption of skillCheckOptions) {
         if (skillCheckOption.optionId === option.option_id && skillCheckOption.enabled ) {

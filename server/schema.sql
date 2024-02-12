@@ -21,3 +21,6 @@ CREATE TABLE users (
     password VARCHAR(50) NOT NULL,
     current_situation INTEGER REFERENCES situations(situation_id)
 );
+
+-- After creating the tables, alter the situations table to modify the situation_text column
+ALTER TABLE situations ALTER COLUMN situation_text TYPE TEXT;
