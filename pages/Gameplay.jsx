@@ -4,7 +4,7 @@ import handleSkillCheckButton from '../components/handleSkillCheckButton'
 
 function Gameplay() {
   const [username, setUsername] = useState('player 1')
-  const [userId, setUserId] = useState('4')
+  const [userId, setUserId] = useState('28')
   const [currentSituation, setCurrentSituation] = useState('1')
   const [options, setOptions] = useState([])
   const [narratorText, setNarratorText] = useState('')
