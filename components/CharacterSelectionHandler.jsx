@@ -49,6 +49,7 @@ function ImageComponent({ imageSrc, popupText }) {
         <p>Character Class</p>
         <p>Character Story</p>
         <p>Character Stats</p>
+        <p> <a href='http://127.0.0.1:5173/gameplay'> select wizard </a></p>
         {/* Conditional rendering of text box and submit button */}
         {isVisible && (
           <form onSubmit={handleSubmit}>

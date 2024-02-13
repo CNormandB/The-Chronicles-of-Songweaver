@@ -4,7 +4,7 @@ import handleSkillCheckButton from '../components/handleSkillCheckButton'
 
 function Gameplay() {
   const [username, setUsername] = useState('player 1')
-  const [userId, setUserId] = useState('28')
+  const [userId, setUserId] = useState('34')
   const [currentSituation, setCurrentSituation] = useState('1')
   const [options, setOptions] = useState([])
   const [narratorText, setNarratorText] = useState('')
@@ -103,7 +103,7 @@ function Gameplay() {
           id='specialButton'
           onClick={() =>  handleSpecialButtonClick(option.option_id, characterClass)}
         >
-          enabled BUTTON BITCH{option.option_name}
+          {option.option_name}
         </button>
       )
     } else if (specialOptionsIdsArray.includes(option.option_id) && (!specialOptionEnabled)) {
@@ -115,7 +115,7 @@ function Gameplay() {
             id='specialButton'
             // onClick={() => handleSpecialButtonClick(option.option_id,  characterClass)}
           >
-            DISABLED  BUTTON  {option.option_name}
+           {option.option_name}
           </button>
       )
     } else {

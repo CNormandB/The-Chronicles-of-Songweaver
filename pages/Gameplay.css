@@ -53,7 +53,8 @@ textarea {
 .options {
   font-family: 'Sixtyfour', sans-serif;
   border: 2px solid rgb(30, 224, 127);
-  color: rgb(30, 224, 127)
+  color: rgb(30, 224, 127);
+  
 }
 
 
@@ -94,5 +95,6 @@ textarea {
 
 .options-container {
   max-width: 490px;
+  display: flex;
 }
 
