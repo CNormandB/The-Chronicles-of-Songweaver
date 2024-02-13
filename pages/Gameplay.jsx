@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "./Gameplay.css";
+import "../components/Header"
 import handleSkillCheckButton from "../components/handleSkillCheckButton";
 
 function Gameplay() {
