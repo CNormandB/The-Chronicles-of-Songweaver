@@ -148,7 +148,7 @@ function Gameplay() {
       console.log("pretend that skill check func happens now!!! COOL!!")
 
       // Add a "disabled" class to the button
-      specialButton.classList.add('disabled');
+      //specialButton.classList.add('disabled');
       //update state array of specialbuttons objects for button to be enabled: false
       setSkillCheckOptions(prevOptions => [
         ...prevOptions.map(option => 
