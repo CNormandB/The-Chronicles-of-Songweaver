@@ -1,8 +1,7 @@
 .Gameplay {
   display: flex;
   width: 100vw;
-  height: 100vh;
-  padding: 2rem;
+  height: auto;
   text-align: center;
   flex-direction: row;
   background-color: #000;
@@ -11,13 +10,14 @@
 .content {
   display: flex;
   align-items: flex-start;
+  height: 87.4vh;
 }
 
 .TextAndButtons {
   flex-direction: column;
   flex-wrap: wrap;
   width:50em;
-  margin-top: 8em;
+  margin-top: 1em;
 }
 
 textarea,
@@ -33,19 +33,14 @@ textarea,
   border: 2px solid rgb(30, 224, 127);
 }
 
-.user-greeting {
-  font-family: "Sixtyfour", sans-serif;
-  color: rgb(30, 224, 127);
-  margin-bottom: 4;
-}
 
 .image-frame {
   display: flex;
   justify-content: flex-start;
-  height: 80vh;
+  height: 75vh;
   width: 40vw;
-  margin-top: 6%;
-  margin-left: 3em;
+  margin-top: 3em;
+  margin-left: 6em;
 }
 
 .image-container {
@@ -68,6 +63,7 @@ textarea,
 .TextAndButtons {
   display: flex;
   justify-content: flex-end;
+  margin-top: 3em;
 }
 
 .option-buttons {
@@ -81,8 +77,7 @@ textarea,
 }
 
 .save-load-buttons {
-  margin-top: 4;
-  margin: 3;
+  margin-top: 3em;
   border: rounded 0;
   background: #000000;
 }
@@ -93,6 +88,6 @@ textarea,
 }
 
 .options-container {
-  max-width: 490px;
+  max-width: auto;
   display: flex;
 }

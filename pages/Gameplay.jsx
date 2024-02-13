@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import "./Gameplay.css";
-import "../components/Header";
+import "../components/Header.jsx";
 import handleSkillCheckButton from "../components/handleSkillCheckButton";
+import Header from "../components/Header.jsx";
 
 function Gameplay() {
   const [username, setUsername] = useState("player 1");
@@ -321,50 +322,53 @@ function Gameplay() {
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   //___________________________________________________________________________________________________
   return (
-    <section className="Gameplay">
-      <div className="content">
-        <div className="image-frame">
-          <div className="image-container">
-            <img className="situation-image" src={image} alt="720p Image" />
+    <div>
+      <Header />
+      <section className="Gameplay">
+        <div className="content">
+          <div className="image-frame">
+            <div className="image-container">
+              <img className="situation-image" src={image} alt="720p Image" />
+            </div>
+          </div>
+          <div className="TextAndButtons">
+            <div className="TextArea">
+              <textarea
+                ref={textareaRef}
+                className="TextBox"
+                rows="5"
+                cols="50"
+                readOnly
+                value={narratorText}
+                style={{ scrollTop: scrollPosition }}
+              />
+            </div>
+
+            {/* OPTIONS BUTTONS */}
+            <div className="option-buttons">
+              {options.map((option) => renderOptionsButtons(option))}
+            </div>
+
+            {/* SAVE AND LOAD BUTTONS */}
+            <div className="save-load-buttons">
+              <button
+                className="m-3 mt-2 options rounded-0 bg-black rounded-4 p-1"
+                onClick={() => saveGameHandler(currentSituation, userId)}
+              >
+                SAVE
+              </button>
+              <button
+                className="m-3 mt-2 options rounded-0 bg-black rounded-4 p-1"
+                onClick={() => loadGameHandler(userId)}
+              >
+                LOAD
+              </button>
+            </div>
           </div>
         </div>
-        <div className="TextAndButtons">
-          <div className="TextArea">
-            <textarea
-              ref={textareaRef}
-              className="TextBox"
-              rows="5"
-              cols="50"
-              readOnly
-              value={narratorText}
-              style={{ scrollTop: scrollPosition }}
-            />
-          </div>
-  
-          {/* OPTIONS BUTTONS */}
-          <div className="option-buttons">
-            {options.map((option) => renderOptionsButtons(option))}
-          </div>
-  
-          {/* SAVE AND LOAD BUTTONS */}
-          <div className="save-load-buttons">
-            <button
-              className="m-3 mt-2 options rounded-0 bg-black rounded-4 p-1"
-              onClick={() => saveGameHandler(currentSituation, userId)}
-            >
-              SAVE
-            </button>
-            <button
-              className="m-3 mt-2 options rounded-0 bg-black rounded-4 p-1"
-              onClick={() => loadGameHandler(userId)}
-            >
-              LOAD
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
-  };  
+}
 
 export default Gameplay;
