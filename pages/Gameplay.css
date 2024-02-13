@@ -1,91 +1,85 @@
-.Gameplay  {
-  max-width: 100vw;
-  max-height: 100vh;
-  padding: 2rem;
+.Gameplay {
+  display: flex;
+  width: 100vw;
+  height: auto;
   text-align: center;
-  background-color: rgb(24, 26, 27);
+  flex-direction: row;
+  background-color: #000;
   color: white;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.content {
+  display: flex;
+  align-items: flex-start;
+  height: 87.4vh;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.TextAndButtons {
+  flex-direction: column;
+  flex-wrap: wrap;
+  width:50em;
+  margin-top: 1em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-textarea {
-  font-family: 'Sixtyfour', sans-serif;
-  border: 2px solid rgb(30, 224, 127);
-  color: rgb(30, 224, 127);
-  max-width: 480px;
-}
-
+textarea,
 .options {
-  font-family: 'Sixtyfour', sans-serif;
+  font-family: "Sixtyfour", sans-serif;
   border: 2px solid rgb(30, 224, 127);
   color: rgb(30, 224, 127);
-  
+  width: auto;
+  margin-left: 6em;
 }
-
 
 .situation-image {
   border: 2px solid rgb(30, 224, 127);
- 
-  
-
 }
 
-.user-greeting {
-  font-family: 'Sixtyfour', sans-serif;
-  color:rgb(30, 224, 127)
-
-}
 
 .image-frame {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  height: 75vh;
+  width: 40vw;
+  margin-top: 3em;
+  margin-left: 6em;
 }
 
 .image-container {
-  width: 480px; /* Set the width of the container */
-  height: 480px; /* Set the height of the container */
-  overflow: hidden; /* Hide overflowing content */
+  overflow: hidden;
 }
 
 .situation-image {
-  width: 100%; 
-  height: 100%; 
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+}
+
+.TextBox {
+  justify-content: flex-end;
+  width: 45vw;
+  height: 60vh;
+  background-color: #000000;
+}
+
+.TextAndButtons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3em;
+}
+
+.option-buttons {
+  flex-wrap: wrap;
+  max-width: 50vw;
+  display: flex;
+  margin-left: 6em;
+
+  background-color: #000000;
+  padding: 1;
+}
+
+.save-load-buttons {
+  margin-top: 3em;
+  border: rounded 0;
+  background: #000000;
 }
 
 .disabled {
@@ -94,7 +88,6 @@ textarea {
 }
 
 .options-container {
-  max-width: 490px;
+  max-width: auto;
   display: flex;
 }
-
