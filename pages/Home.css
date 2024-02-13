@@ -1,39 +1,33 @@
-html, body {
-  overflow: hidden;
-  height: 100%;
-}
-
 .Home {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: #000000;
 }
 
 .HomePage {
   position: relative;
   z-index: 1;
-  max-width: 95%;
-  padding-right: 2em;
+  max-width: 75%;
   text-align: center;
-  background: hsl(0, 0%, 0%);
+  background: #000000;
   color: #d5b869;
   font-family: 'VT323', monospace;
 }
  
 .Logo {
   padding-top: 1em;
-  min-width: 95%;
+  height: 20%;
+  width: 95%;
 }
-
-.UnderLogo {
+ .UnderLogo {
   display: flex;
-}
+
+ }
 .Songweaver {
   display: flex;
   justify-content:flex-start;
-  max-width: 40%;
+  max-width: 30%;
 }
 
 .Instructions {
@@ -45,18 +39,26 @@ html, body {
 
 .FormSection {
   display: flex;
-  flex-direction: column;
+  flex-direction: column
 }
 
 .Forms {
   display: flex;
   flex-direction: row;
   justify-content:center;
-  font-size:35px;
-  margin-top: 0.5em;
+  
+  font-size:35px
 }
 
-.LoginForm, .RegisterForm {
+.LoginForm {
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items: center;
+  max-width: 50%;
+}
+
+.RegisterForm {
   display: flex;
   flex-direction:column;
   justify-content:center;
@@ -65,22 +67,22 @@ html, body {
 }
 
 .Forms input {
-  height: 10%;
-  max-width: 90%;
-  padding: 0.5em;
-  margin: 2%;
+  width: 85%;
+  margin: 3%;
   border-color:  #49b0a5;
   background-color: #000000;
   font-family: 'VT323', monospace;
+  font-size:30px;
   color: #FFFFFF;
+  justify-content:center;
 }
 
 .Forms button {
   display: flex;
   justify-content: center;
-  width: 35%;
+  width: 38%;
   padding: 2%;
-  margin: 3%;
+  margin: 2%;
   background-color: #49b0a5;
   font-family: 'VT323', monospace;
   font-size: 25px;
@@ -109,7 +111,6 @@ html, body {
 .background-scroll-content {
   background-image: url('/Home/HomeRepeatingPattern.png');
   background-repeat: repeat;
-  background-size: auto;
   width: 100%;
   height: 250%;
   position: absolute;

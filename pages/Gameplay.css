@@ -1,6 +1,6 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+.Gameplay  {
+  max-width: 100vw;
+  max-height: 100vh;
   padding: 2rem;
   text-align: center;
   background-color: rgb(24, 26, 27);

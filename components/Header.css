@@ -1,16 +1,33 @@
 .Header {
   display: flex;
-  flex-direction:column;
+  justify-content: space-between;
+  width: 100vw;
   background: #000000;
   color: #ffffff;
   font-family: "VT323", monospace;
 }
 
 .Logo {
-  justify-content:flex-start;
-  max-width: 30%;
+  width: 45%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left:1em;
+}
+
+.RightSide {
+  display: flex;
+  align-items: flex-end;
 }
 
 .Greeting {
-  justify-content:flex-end;
+  margin-right: 2em;
+  font-size: 1.5em;
+}
+
+.Logout {
+  color: #ffffff;
+  background-color: #000000;
+  border: .15em solid #52cad3;
+  margin-right: 2em;
+  margin-bottom: 1em;
 }
