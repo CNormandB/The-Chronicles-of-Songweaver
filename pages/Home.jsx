@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import ScrollingBackground from "../components/ScrollingBackground";
 
+
 function Home() {
   return (
     <div className="Home">
@@ -19,7 +20,7 @@ function Home() {
                 <p>Login</p>
                 <input placeholder="Email or Username"></input>
                 <input placeholder="Password"></input>
-                <button> Login </button>
+                <button ><a href="http://127.0.0.1:5173/CharacterSelection"> Login </a> </button>
               </form>
               <form
                 className="RegisterForm"

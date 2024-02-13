@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import "./Gameplay.css";
 import "../components/Header"
 import handleSkillCheckButton from "../components/handleSkillCheckButton";
+import Header from "../components/Header";
 
 function Gameplay() {
   const [username, setUsername] = useState('player 1')
@@ -322,8 +323,9 @@ function Gameplay() {
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   //___________________________________________________________________________________________________
   return (
+    
     <section className="Gameplay">
-      <h2 className="user-greeting mb-4">Welcome to the game : {username} </h2>
+      <Header />
 
       <div>
         <div>
