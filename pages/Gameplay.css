@@ -36,7 +36,7 @@ textarea,
 
 .image-frame {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   height: 75vh;
   width: 40vw;
   margin-top: 3em;
