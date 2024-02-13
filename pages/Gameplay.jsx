@@ -1,16 +1,16 @@
 import { useState, useEffect, useRef } from "react";
 import "./Gameplay.css";
-import "../components/Header"
+import "../components/Header";
 import handleSkillCheckButton from "../components/handleSkillCheckButton";
 
 function Gameplay() {
-  const [username, setUsername] = useState('player 1')
-  const [userId, setUserId] = useState('34')
-  const [currentSituation, setCurrentSituation] = useState('1')
-  const [options, setOptions] = useState([])
-  const [narratorText, setNarratorText] = useState('')
-  const [image, setImage] = useState('')
-  const [characterClass, setCharacterClass] = useState('Wizard')
+  const [username, setUsername] = useState("player 1");
+  const [userId, setUserId] = useState("34");
+  const [currentSituation, setCurrentSituation] = useState("1");
+  const [options, setOptions] = useState([]);
+  const [narratorText, setNarratorText] = useState("");
+  const [image, setImage] = useState("");
+  const [characterClass, setCharacterClass] = useState("Wizard");
   const [scrollPosition, setScrollPosition] = useState(0);
   const [skillCheckOptions, setSkillCheckOptions] = useState([
     {
@@ -48,7 +48,7 @@ function Gameplay() {
     }
 
     setScrollPosition(textareaRef.current.scrollHeight);
-    Promise.resolve()
+    Promise.resolve();
   };
 
   const delay = (ms) => new Promise((res) => setTimeout(res, ms));
@@ -80,10 +80,10 @@ function Gameplay() {
   //render options buttons---------------------------------------------------------------
 
   const renderOptionsButtons = (option) => {
-    
-
-    const specialOptionsIdsArray = [5, 9, 11, 12, 16, 20, 27, 28, 31, 37, 45, 46, 54, 65]
-    const specialOptionEnabled = (() => {
+    const specialOptionsIdsArray = [
+      5, 9, 11, 12, 16, 20, 27, 28, 31, 37, 45, 46, 54, 65,
+    ];
+    const specialOptionEnabled = () => {
       for (const skillCheckOption of skillCheckOptions) {
         if (
           skillCheckOption.optionId === option.option_id &&
@@ -94,7 +94,7 @@ function Gameplay() {
           return false;
         }
       }
-    });
+    };
 
     if (
       specialOptionsIdsArray.includes(option.option_id) &&
@@ -121,16 +121,16 @@ function Gameplay() {
       // render disabled avalable skillcheck button type
       return (
         <button
-            className='m-1 mt-2 options rounded-0 bg-special disabled'
-            key={option.option_id}
-            id='specialButton'
-            // onClick={() => handleSpecialButtonClick(option.option_id,  characterClass)}
-          >
-           {option.option_name}
-          </button>
-      )
+          className="m-1 mt-2 options rounded-0 bg-special disabled"
+          key={option.option_id}
+          id="specialButton"
+          // onClick={() => handleSpecialButtonClick(option.option_id,  characterClass)}
+        >
+          {option.option_name}
+        </button>
+      );
     } else {
-       return (
+      return (
         // Render normal button type for regular button
         <button
           className="m-1 mt-2 options rounded-0 bg-black "
@@ -242,7 +242,6 @@ function Gameplay() {
   // };
 
   //USE EFFECTS ----------------------------------------------------------------------------------------
-
   useEffect(() => {
     const fetchData = async () => {
       let isInitialMount = true;
@@ -323,8 +322,6 @@ function Gameplay() {
   //___________________________________________________________________________________________________
   return (
     <section className="Gameplay">
-      <h2 className="user-greeting mb-4">Welcome to the game : {username} </h2>
-
       <div>
         <div>
           <div className="image-frame">
@@ -332,14 +329,11 @@ function Gameplay() {
               <img className="situation-image" src={image} alt="720p Image" />
             </div>
           </div>
-
-          {/* _______________________________TEXT AREA BOX_______________________________________________ */}
-          <div>
-            <div className="mt-3">
-              <p className="mb-0"></p>
+          <div className="TextAndButtons">
+            <div className="TextArea">
               <textarea
                 ref={textareaRef}
-                className="w-50 bg-black"
+                className="TextBox"
                 rows="5"
                 cols="50"
                 readOnly
@@ -348,27 +342,27 @@ function Gameplay() {
               />
             </div>
           </div>
-        </div>
 
-        {/* ___________________________________OPTIONS BUTTONS_____________________________*/}
-        <div className="w-50 d-flex mx-auto options-container">
-          {options.map((option) => renderOptionsButtons(option))}
-        </div>
+          {/* ___________________________________OPTIONS BUTTONS_____________________________*/}
+          <div className="option-buttons">
+            {options.map((option) => renderOptionsButtons(option))}
+          </div>
 
-        {/* ________________SAVE AND LOAD BUTTONS ____________________________________________ */}
-        <div className="mt-4">
-          <button
-            className="m-2 mt-2 options rounded-0 bg-black rounded-4 p-1"
-            onClick={() => saveGameHandler(currentSituation, userId)}
-          >
-            SAVE
-          </button>
-          <button
-            className="m-3 mt-2 options rounded-0 bg-black rounded-4 p-1"
-            onClick={() => loadGameHandler(userId)}
-          >
-            LOAD
-          </button>
+          {/* ________________SAVE AND LOAD BUTTONS ____________________________________________ */}
+          <div className="save-load-buttons">
+            <button
+              className="m-3 mt-2 options rounded-0 bg-black rounded-4 p-1"
+              onClick={() => saveGameHandler(currentSituation, userId)}
+            >
+              SAVE
+            </button>
+            <button
+              className="m-3 mt-2 options rounded-0 bg-black rounded-4 p-1"
+              onClick={() => loadGameHandler(userId)}
+            >
+              LOAD
+            </button>
+          </div>
         </div>
       </div>
     </section>
