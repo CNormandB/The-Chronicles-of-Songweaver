@@ -4,7 +4,7 @@ import handleSkillCheckButton from '../components/handleSkillCheckButton'
 
 function Gameplay() {
   const [username, setUsername] = useState('player 1')
-  const [userId, setUserId] = useState('4')
+  const [userId, setUserId] = useState('28')
   const [currentSituation, setCurrentSituation] = useState('1')
   const [options, setOptions] = useState([])
   const [narratorText, setNarratorText] = useState('')
@@ -47,6 +47,7 @@ function Gameplay() {
     }
 
     setScrollPosition(textareaRef.current.scrollHeight);
+    Promise.resolve()
   };
 
   const delay = (ms) => new Promise((res) => setTimeout(res, ms));
@@ -82,7 +83,7 @@ function Gameplay() {
   const renderOptionsButtons = (option) => {
     
 
-    const specialOptionsIdsArray = [5]
+    const specialOptionsIdsArray = [5, 9, 11, 12, 16, 20, 27, 28, 31, 37, 45, 46, 54, 65]
     const specialOptionEnabled = (() => {
       for (const skillCheckOption of skillCheckOptions) {
         if (skillCheckOption.optionId === option.option_id && skillCheckOption.enabled ) {
@@ -118,7 +119,7 @@ function Gameplay() {
           </button>
       )
     } else {
-      return (
+       return (
         // Render normal button type for regular button
         <button
           className='m-1 mt-2 options rounded-0 bg-black '

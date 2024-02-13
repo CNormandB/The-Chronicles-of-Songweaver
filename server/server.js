@@ -129,7 +129,7 @@ app.post('/update-situation/:userId', async (req, res) => {
     const query = 'UPDATE users SET current_situation = $1 WHERE user_id = $2;'
     await pool.query(query, [currentSituation, userId]);
 
-    res.json({ message: "GAME SAVED" })
+    res.json({ message: `Game saved at: ${currentSituation} for user: ${userId}`})
   } catch (error) {
     console.log(error.message)
     res.status(500).json({ error: "Internal Server Error" })
