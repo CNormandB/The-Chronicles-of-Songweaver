@@ -1,48 +1,23 @@
 .Gameplay {
+  display: flex;
   width: 100vw;
   height: 100vh;
   padding: 2rem;
   text-align: center;
+  flex-direction: row;
   background-color: #000;
   color: white;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.content {
+  display: flex;
+  align-items: flex-start;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.TextAndButtons {
+  flex-direction: column;
+  flex-wrap: wrap;
+  width:50em;
+  margin-top: 8em;
 }
 
 textarea,
@@ -50,7 +25,8 @@ textarea,
   font-family: "Sixtyfour", sans-serif;
   border: 2px solid rgb(30, 224, 127);
   color: rgb(30, 224, 127);
-  max-width: 480px;
+  width: auto;
+  margin-left: 6em;
 }
 
 .situation-image {
@@ -66,11 +42,13 @@ textarea,
 .image-frame {
   display: flex;
   justify-content: flex-start;
+  height: 80vh;
+  width: 40vw;
+  margin-top: 8em;
+  margin-left: 1em;
 }
 
 .image-container {
-  width: 480px;
-  height: 80vh;
   overflow: hidden;
 }
 
@@ -83,24 +61,30 @@ textarea,
 .TextBox {
   justify-content: flex-end;
   width: 45vw;
+  height: 60vh;
   background-color: #000000;
+}
 
+.TextAndButtons {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .option-buttons {
-  width:50;
+  flex-wrap: wrap;
+  max-width: 50vw;
   display: flex;
-  margin: 2;
-  margin-top: 2;
+  margin-left: 6em;
+
   background-color: #000000;
   padding: 1;
 }
 
-.save-load-buttons{
+.save-load-buttons {
   margin-top: 4;
-  margin:3;
+  margin: 3;
   border: rounded 0;
-   background: #000000
+  background: #000000;
 }
 
 .disabled {

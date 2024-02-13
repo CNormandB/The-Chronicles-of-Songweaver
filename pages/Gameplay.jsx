@@ -322,33 +322,31 @@ function Gameplay() {
   //___________________________________________________________________________________________________
   return (
     <section className="Gameplay">
-      <div>
-        <div>
-          <div className="image-frame">
-            <div className="image-container">
-              <img className="situation-image" src={image} alt="720p Image" />
-            </div>
+      <div className="content">
+        <div className="image-frame">
+          <div className="image-container">
+            <img className="situation-image" src={image} alt="720p Image" />
           </div>
-          <div className="TextAndButtons">
-            <div className="TextArea">
-              <textarea
-                ref={textareaRef}
-                className="TextBox"
-                rows="5"
-                cols="50"
-                readOnly
-                value={narratorText}
-                style={{ scrollTop: scrollPosition }}
-              />
-            </div>
+        </div>
+        <div className="TextAndButtons">
+          <div className="TextArea">
+            <textarea
+              ref={textareaRef}
+              className="TextBox"
+              rows="5"
+              cols="50"
+              readOnly
+              value={narratorText}
+              style={{ scrollTop: scrollPosition }}
+            />
           </div>
-
-          {/* ___________________________________OPTIONS BUTTONS_____________________________*/}
+  
+          {/* OPTIONS BUTTONS */}
           <div className="option-buttons">
             {options.map((option) => renderOptionsButtons(option))}
           </div>
-
-          {/* ________________SAVE AND LOAD BUTTONS ____________________________________________ */}
+  
+          {/* SAVE AND LOAD BUTTONS */}
           <div className="save-load-buttons">
             <button
               className="m-3 mt-2 options rounded-0 bg-black rounded-4 p-1"
@@ -367,6 +365,6 @@ function Gameplay() {
       </div>
     </section>
   );
-}
+  };  
 
 export default Gameplay;
