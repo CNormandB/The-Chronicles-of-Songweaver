@@ -94,7 +94,7 @@ function Gameplay() {
           return false;
         }
       }
-    };
+    });
 
     if (
       specialOptionsIdsArray.includes(option.option_id) &&
@@ -356,7 +356,7 @@ function Gameplay() {
         </div>
 
         {/* ________________SAVE AND LOAD BUTTONS ____________________________________________ */}
-        <div className="mt-4 ">
+        <div className="mt-4">
           <button
             className="m-2 mt-2 options rounded-0 bg-black rounded-4 p-1"
             onClick={() => saveGameHandler(currentSituation, userId)}
