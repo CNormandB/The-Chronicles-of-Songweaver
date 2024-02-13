@@ -169,9 +169,50 @@ if (optionId === 37) {
   if (rollResult20 >= 15) {
       updateNarratorText(`\nDICEROLL RESULT: ${rollResult20}\n As you converse with Father Daragor, you sense his guardedness, like a veil over his words. However, Despite your suspicions, there is no concrete evidence to challenge his story. With a sigh of resignation, you accept the inability to uncover the truth, at least for now.`);
   } else {
-      updateNarratorText(`\nDICEROLL RESULT: ${rollResult20}\nYou fail to notice anything suspicious about Father Daragor''s statement.`);
+      updateNarratorText(`\nDICEROLL RESULT: ${rollResult20}\nYou fail to notice anything suspicious about Father Daragor's statement.`);
   }
 }
+
+if (optionId === 45) {
+  const rollResult20 = D20Roller("intelligence", characterClass);
+
+  if (rollResult20 >= 10) {
+      updateNarratorText(`\nDICEROLL RESULT: ${rollResult20}\n You discover that these wounds were likely the work of something with giant claws.`);
+  } else {
+      updateNarratorText(`\nDICEROLL RESULT: ${rollResult20}\nYou fail to determine what caused these wounds`);
+  }
+}
+
+if (optionId === 46) {
+  const rollResult20 = D20Roller("wisdom", characterClass);
+
+  if (rollResult20 >= 10) {
+      updateNarratorText(`\nDICEROLL RESULT: ${rollResult20}\n You discover this was likely the work of something with giant claws, however, if it was the work of an animal the corpse would likely be at least partially eaten, but there are no teeth marks anywhere.`);
+  } else {
+      updateNarratorText(`\nDICEROLL RESULT: ${rollResult20}\nYou fail to determine what could have killed him`);
+  }
+}
+
+if (optionId === 54) {
+  const rollResult20 = D20Roller("wisdom", characterClass);
+
+  if (rollResult20 >= 13) {
+      updateNarratorText(`\nDICEROLL RESULT: ${rollResult20}\n You determine this is certainly the trail of a wolf, but one bigger than any should be.`);
+  } else {
+      updateNarratorText(`\nDICEROLL RESULT: ${rollResult20}\nYou fail to determine what could have made these tracks.`);
+  }
+}
+
+if (optionId === 65) {
+  const rollResult20 = D20Roller("intelligence", characterClass);
+
+  if (rollResult20 >= 15) {
+      updateNarratorText(`\nDICEROLL RESULT: ${rollResult20}\n You decover a single strand of silver hair. Who could have left this behind?`);
+  } else {
+      updateNarratorText(`\nDICEROLL RESULT: ${rollResult20}\nYou fail to find anything substantial.`);
+  }
+}
+
   
   console.log('handle skill check function RAN!')
 }
