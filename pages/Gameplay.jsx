@@ -37,7 +37,7 @@ function Gameplay() {
   };
   // setLoggedInUser()
 
-  //update narratorText function and textarea SCROLL--------------------------------------------------
+  //update narratorText function and textarea SCROLL-find way to stop function when you click a button to prevent double text-
   const updateNarratorText = async (text) => {
     const characters = text.split("");
     let typedText = "";
